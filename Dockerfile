@@ -9,9 +9,10 @@ RUN apt-get update && apt-get install -y \
     libicu-dev \
     libjpeg-dev \
     libpng-dev \
+    libpq-dev \
     libsodium-dev \
+    libxml2-dev \
     libzip-dev \
-    mysql-client \
     nodejs \
     unzip \
     wget \
@@ -29,7 +30,7 @@ RUN "date"
 # Type docker-php-ext-install to see available extensions
 RUN docker-php-ext-configure gd
 RUN docker-php-ext-configure intl
-RUN docker-php-ext-install bcmath gd intl pdo pdo_mysql sodium zip
+RUN docker-php-ext-install bcmath gd intl pdo pdo_mysql soap sodium zip
 
 # Install xdebug
 RUN pecl install xdebug-beta
