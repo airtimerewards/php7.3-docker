@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     libsodium-dev \
     libxml2-dev \
     libzip-dev \
-    nodejs \
+    nodejs=8.\* \
     unzip \
     wget \
     yarn
