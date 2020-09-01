@@ -30,7 +30,7 @@ RUN "date"
 # Type docker-php-ext-install to see available extensions
 RUN docker-php-ext-configure gd
 RUN docker-php-ext-configure intl
-RUN docker-php-ext-install bcmath gd intl pdo pdo_mysql soap sodium zip
+RUN docker-php-ext-install bcmath gd intl pdo pdo_mysql soap sockets sodium zip
 
 # Install xdebug
 RUN pecl install xdebug geospatial-beta mongodb
